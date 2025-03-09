@@ -10,7 +10,7 @@ const Login = ({setIsLoggedIn}) => {
 
     const handleLogin = async () => {
         try {
-          const res = await axios.post("https://backend-gurr.onrender.com/login", { email, password });
+          const res = await axios.post("https://localhost:3700//backend-gurr.onrender.com/login", { email, password });
           localStorage.setItem("username", res.data.username);
           setIsLoggedIn(true);
           navigate("/home");
